@@ -16,16 +16,22 @@
     #include <string>
 
     #ifdef ONLY_FOR_LEX
+    #include <sstream>
+    #include <iostream>
+    #include <iomanip>
     #include <ostream>
     #include <fstream>
     using namespace std;
     extern FILE *yyin; 
     extern FILE *yyout;
 
-    void DEBUG_FOR_LAB4(std::string s){
-        std::string DEBUG_INFO = s + "\n";
+    void DEBUG_FOR_LAB4_TABLE(string s1, string s2){
+        stringstream ss;
+        ss << left << setw(20) << s1;
+        ss << << s2 << endl;
+        fputs(ss.str().c_str(), yyout);
         // std::string DEBUG_INFO = "[DEBUG LAB4]: \t" + s + "\n";
-        fputs(DEBUG_INFO.c_str(), yyout);
+        // fputs(DEBUG_INFO.c_str(), yyout);
     }
     #endif
 %}
@@ -51,35 +57,35 @@ commentelement [^\n]
     *   Q2: What is "INT" actually?
     */
     #ifdef ONLY_FOR_LEX
-        DEBUG_FOR_LAB4("INT\tint");
+        DEBUG_FOR_LAB4_TABLE("INT", "int");
     #else
         return INT;
     #endif
 }
 "void" {
     #ifdef ONLY_FOR_LEX
-        DEBUG_FOR_LAB4("VOID\tvoid");
+        DEBUG_FOR_LAB4_TABLE("VOID", "void");
     #else
         return VOID;
     #endif 
 }
 "if" {
     #ifdef ONLY_FOR_LEX
-        DEBUG_FOR_LAB4("IF\tif");
+        DEBUG_FOR_LAB4_TABLE("IF", "if");
     #else
         return IF;
     #endif
 };
 "else" {
     #ifdef ONLY_FOR_LEX
-        DEBUG_FOR_LAB4("ELSE\telse");
+        DEBUG_FOR_LAB4_TABLE("ELSE", "else");
     #else
         return ELSE;
     #endif
 };
 "return" {
     #ifdef ONLY_FOR_LEX
-        DEBUG_FOR_LAB4("RETURN\treturn");
+        DEBUG_FOR_LAB4_TABLE("RETURN", "return");
     #else
         return RETURN;
     #endif
@@ -87,64 +93,63 @@ commentelement [^\n]
 
 "=" {
     #ifdef ONLY_FOR_LEX
-        DEBUG_FOR_LAB4("ASSIGN\t=");
+        DEBUG_FOR_LAB4_TABLE("ASSIGN", "=");
     #else
         return ASSIGN;
     #endif
 }
 "<" {
     #ifdef ONLY_FOR_LEX
-        DEBUG_FOR_LAB4("LESS\t<");
+        DEBUG_FOR_LAB4_TABLE("LESS", "<");
     #else
         return LESS;
     #endif
 }
 "+" {
     #ifdef ONLY_FOR_LEX
-        DEBUG_FOR_LAB4("ADD\t+");
+        DEBUG_FOR_LAB4_TABLE("ADD", "+");
     #else
         return ADD;
     #endif
 }
 ";" {
     #ifdef ONLY_FOR_LEX
-        DEBUG_FOR_LAB4("SEMICOLON\t;");
+        DEBUG_FOR_LAB4_TABLE("SEMICOLON", ";");
     #else
         return SEMICOLON;
     #endif
 }
 "(" {
     #ifdef ONLY_FOR_LEX
-        DEBUG_FOR_LAB4("LPAREN\t(");
+        DEBUG_FOR_LAB4_TABLE("LPAREN", "(");
     #else
         return LPAREN;
     #endif
 }
 ")" {
     #ifdef ONLY_FOR_LEX
-        DEBUG_FOR_LAB4("RPAREN\t)");
+        DEBUG_FOR_LAB4_TABLE("RPAREN", ")");
     #else
     return RPAREN;
     #endif
 }
 "{" {
     #ifdef ONLY_FOR_LEX
-        DEBUG_FOR_LAB4("LBRACE\t{");
+        DEBUG_FOR_LAB4_TABLE("LBRACE", "{");
     #else
         return LBRACE;
     #endif
 }
 "}" {
     #ifdef ONLY_FOR_LEX
-        DEBUG_FOR_LAB4("RBRACE\t}");
+        DEBUG_FOR_LAB4_TABLE("RBRACE", "}");
     #else
         return RBRACE;
     #endif
 }
 {DECIMIAL} {
     #ifdef ONLY_FOR_LEX
-        string lab4dbg = "DECIMAL\t";
-        DEBUG_FOR_LAB4(lab4dbg + yytext);
+        DEBUG_FOR_LAB4_TABLE("DECIMAL", yytext);
     #else
     yylval.itype = atoi(yytext);
     return INTEGER;
@@ -152,8 +157,7 @@ commentelement [^\n]
 }
 {ID} {
     #ifdef ONLY_FOR_LEX
-        string lab4dbg = "ID\t";
-        DEBUG_FOR_LAB4(lab4dbg + yytext);
+        DEBUG_FOR_LAB4_TABLE("ID", yytext);
     #else
     char *lexeme;
     lexeme = new char[strlen(yytext) + 1];
