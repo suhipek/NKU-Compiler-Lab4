@@ -23,7 +23,8 @@
     extern FILE *yyout;
 
     void DEBUG_FOR_LAB4(std::string s){
-        std::string DEBUG_INFO = "[DEBUG LAB4]: \t" + s + "\n";
+        std::string DEBUG_INFO = s + "\n";
+        // std::string DEBUG_INFO = "[DEBUG LAB4]: \t" + s + "\n";
         fputs(DEBUG_INFO.c_str(), yyout);
     }
     #endif
@@ -33,7 +34,13 @@ DECIMIAL ([1-9][0-9]*|0)
 ID [[:alpha:]_][[:alpha:][:digit:]_]*
 EOL (\r\n|\n|\r)
 WHITE [\t ]
+commentbegin "/*"
+commentend "*/"
+commentline "//"
+commentelement [^\n]
+
 %x BLOCKCOMMENT
+%x LINECOMMENT
 
 %%
 
@@ -133,6 +140,46 @@ WHITE [\t ]
     #else
         return RBRACE;
     #endif
+}
+{DECIMIAL} {
+    #ifdef ONLY_FOR_LEX
+        string lab4dbg = "DECIMAL\t";
+        DEBUG_FOR_LAB4(lab4dbg + yytext);
+    #else
+    yylval.itype = atoi(yytext);
+    return INTEGER;
+    #endif
+}
+{ID} {
+    #ifdef ONLY_FOR_LEX
+        string lab4dbg = "ID\t";
+        DEBUG_FOR_LAB4(lab4dbg + yytext);
+    #else
+    char *lexeme;
+    lexeme = new char[strlen(yytext) + 1];
+    strcpy(lexeme, yytext);
+    yylval.strtype = lexeme;
+    return ID;
+    #endif
+}
+{commentbegin} {
+    BEGIN BLOCKCOMMENT;
+}
+<BLOCKCOMMENT>{commentelement} {
+}
+<BLOCKCOMMENT>{EOL} {
+}
+<BLOCKCOMMENT>{commentend} {
+    BEGIN INITIAL;
+}
+
+{commentline} {
+    BEGIN LINECOMMENT;
+}
+<LINECOMMENT>{commentelement} {
+}
+<LINECOMMENT>{EOL} {
+    BEGIN INITIAL;
 }
 
 {EOL} yylineno++;
