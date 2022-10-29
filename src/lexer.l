@@ -148,7 +148,7 @@ commentelement [^\n]
 
 
 "continue" {
-    //增加了新的符号表
+    //增加了新的关键词定义
     #ifdef ONLY_FOR_LEX
         DEBUG_FOR_LAB4_TABLE("CONTINUE","continue");
     #else
