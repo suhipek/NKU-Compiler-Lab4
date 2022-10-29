@@ -23,9 +23,11 @@
     #include <fstream>
     #include <map>
     #include <vector>
+    
     using namespace std;
     extern FILE *yyin; 
     extern FILE *yyout;
+    
     int nowIdAttr = 0;
     struct Symtab{
         map<string, int> idAttrMap; 
@@ -36,6 +38,8 @@
     Symtab *nowScope = &globalScope;
 
     #define TABLE_WIDTH 16
+    
+    
     void DEBUG_FOR_LAB4_TABLE(string s1, string s2, string s3=""){
         stringstream ss;
         ss << left << setw(TABLE_WIDTH) << s1;
@@ -63,6 +67,16 @@ commentelement [^\n]
 
 %x BLOCKCOMMENT
 %x LINECOMMENT
+
+
+
+
+
+
+
+
+
+
 
 %%
 
@@ -171,6 +185,15 @@ commentelement [^\n]
         return EQUAL;
     #endif
 }
+
+"！=" {
+    #ifdef ONLY_FOR_LEX
+        DEBUG_FOR_LAB4_TABLE("NOEQUAL", "!=");
+    #else
+        return NOEQUAL;
+    #endif
+}
+
 
 ";" {
     #ifdef ONLY_FOR_LEX
@@ -301,9 +324,11 @@ commentelement [^\n]
     BEGIN INITIAL;
 }
 
+
 {EOL} yylineno++;
 {WHITE}
 %%
+
 
 #ifdef ONLY_FOR_LEX
 int main(int argc, char **argv){
