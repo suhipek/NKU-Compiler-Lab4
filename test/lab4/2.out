@@ -1,55 +1,79 @@
-//iamafunction:thisfunctionhasmanysyntaxerrors.[DEBUG LAB4]: 	INT	int
-f[DEBUG LAB4]: 	LPAREN	(
-[DEBUG LAB4]: 	RPAREN	)
-[DEBUG LAB4]: 	LBRACE	{
-[DEBUG LAB4]: 	INT	int
-a[DEBUG LAB4]: 	SEMICOLON	;
-a[DEBUG LAB4]: 	ASSIGN	=
-0[DEBUG LAB4]: 	SEMICOLON	;
-while[DEBUG LAB4]: 	LPAREN	(
-a[DEBUG LAB4]: 	LESS	<
-10[DEBUG LAB4]: 	RPAREN	)
-[DEBUG LAB4]: 	LBRACE	{
-a[DEBUG LAB4]: 	ASSIGN	=
-a*2345[DEBUG LAB4]: 	SEMICOLON	;
-[DEBUG LAB4]: 	RBRACE	}
-[DEBUG LAB4]: 	RETURN	return
-a[DEBUG LAB4]: 	SEMICOLON	;
-[DEBUG LAB4]: 	RBRACE	}
-[DEBUG LAB4]: 	INT	int
-main[DEBUG LAB4]: 	LPAREN	(
-[DEBUG LAB4]: 	RPAREN	)
-[DEBUG LAB4]: 	LBRACE	{
-[DEBUG LAB4]: 	INT	int
-_testid[DEBUG LAB4]: 	SEMICOLON	;
-_testid[DEBUG LAB4]: 	ASSIGN	=
-0[DEBUG LAB4]: 	SEMICOLON	;
-[DEBUG LAB4]: 	IF	if
-[DEBUG LAB4]: 	LPAREN	(
-_testid[DEBUG LAB4]: 	ASSIGN	=
-[DEBUG LAB4]: 	ASSIGN	=
-0[DEBUG LAB4]: 	RPAREN	)
-[DEBUG LAB4]: 	LBRACE	{
-[DEBUG LAB4]: 	INT	int
-_testid[DEBUG LAB4]: 	SEMICOLON	;
-[DEBUG LAB4]: 	INT	int
-_testid2[DEBUG LAB4]: 	SEMICOLON	;
-_testid1[DEBUG LAB4]: 	ASSIGN	=
-_testid1[DEBUG LAB4]: 	ADD	+
-1[DEBUG LAB4]: 	SEMICOLON	;
-[DEBUG LAB4]: 	RBRACE	}
-/*Commentlines[DEBUG LAB4]: 	SEMICOLON	;
-*/[DEBUG LAB4]: 	LBRACE	{
-[DEBUG LAB4]: 	INT	int
-a[DEBUG LAB4]: 	SEMICOLON	;
-[DEBUG LAB4]: 	RBRACE	}
-[DEBUG LAB4]: 	LBRACE	{
-[DEBUG LAB4]: 	INT	int
-a[DEBUG LAB4]: 	SEMICOLON	;
-[DEBUG LAB4]: 	RBRACE	}
-[DEBUG LAB4]: 	INT	int
-b[DEBUG LAB4]: 	SEMICOLON	;
-[DEBUG LAB4]: 	RETURN	return
-0[DEBUG LAB4]: 	SEMICOLON	;
-[DEBUG LAB4]: 	RBRACE	}
-/*Commentlines.*/
+INT             int             3                               
+ID              f               3               0    0x55fa9c2480c0
+LPAREN          (               3                               
+RPAREN          )               3                               
+LBRACE          {               3                               
+INT             int             4                               
+ID              a               4               1    0x55fa9daa4860
+SEMICOLON       ;               4                               
+ID              a               5               1    0x55fa9daa4860
+ASSIGN          =               5                               
+DECIMAL         0               5                               
+SEMICOLON       ;               5                               
+WHILE           while           6                               
+LPAREN          (               6                               
+ID              a               6               1    0x55fa9daa4860
+LESS            <               6                               
+DECIMAL         10              6                               
+RPAREN          )               6                               
+LBRACE          {               6                               
+ID              a               7               2    0x55fa9daa4930
+ASSIGN          =               7                               
+ID              a               7               2    0x55fa9daa4930
+STAR            *               7                               
+DECIMAL         2345            7                               
+SEMICOLON       ;               7                               
+RBRACE          }               8                               
+RETURN          return          9                               
+ID              a               9               1    0x55fa9daa4860
+SEMICOLON       ;               9                               
+RBRACE          }               10                              
+INT             int             12                              
+ID              main            12              3    0x55fa9c2480c0
+LPAREN          (               12                              
+RPAREN          )               12                              
+LBRACE          {               12                              
+INT             int             13                              
+ID              _testid         13              4    0x55fa9daa4a50
+SEMICOLON       ;               13                              
+ID              _testid         14              4    0x55fa9daa4a50
+ASSIGN          =               14                              
+DECIMAL         0               14                              
+SEMICOLON       ;               14                              
+IF              if              15                              
+LPAREN          (               15                              
+ID              _testid         15              4    0x55fa9daa4a50
+EQUAL           ==              15                              
+DECIMAL         0               15                              
+RPAREN          )               15                              
+LBRACE          {               15                              
+INT             int             16                              
+ID              _testid         16              5    0x55fa9daa4b20
+SEMICOLON       ;               16                              
+INT             int             17                              
+ID              _testid2        17              6    0x55fa9daa4b20
+SEMICOLON       ;               17                              
+ID              _testid1        18              7    0x55fa9daa4b20
+ASSIGN          =               18                              
+ID              _testid1        18              7    0x55fa9daa4b20
+ADD             +               18                              
+DECIMAL         1               18                              
+SEMICOLON       ;               18                              
+RBRACE          }               19                              
+LBRACE          {               23                              
+INT             int             24                              
+ID              a               24              8    0x55fa9daa4c70
+SEMICOLON       ;               24                              
+RBRACE          }               25                              
+LBRACE          {               26                              
+INT             int             27                              
+ID              a               27              9    0x55fa9daa4d40
+SEMICOLON       ;               27                              
+RBRACE          }               28                              
+INT             int             29                              
+ID              b               29              10    0x55fa9daa4a50
+SEMICOLON       ;               29                              
+RETURN          return          30                              
+DECIMAL         0               30                              
+SEMICOLON       ;               30                              
+RBRACE          }               31                              

@@ -186,7 +186,7 @@ commentelement [^\n]
     #endif
 }
 
-"！=" {
+"!=" {
     #ifdef ONLY_FOR_LEX
         DEBUG_FOR_LAB4_TABLE("NOEQUAL", "!=");
     #else
