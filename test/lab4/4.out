@@ -1,0 +1,95 @@
+INT             int             2                               
+ID              main            2               0    0x55a91f0e70c0
+LPAREN          (               2                               
+RPAREN          )               2                               
+LBRACE          {               3                               
+CHAR            char            5                               
+ID              grade           5               1    0x55a91f1b9860
+ASSIGN          =               5                               
+'ID              D               5               2    0x55a91f1b9860
+'SEMICOLON       ;               5                               
+SWITCH          switch          7                               
+LPAREN          (               7                               
+ID              grade           7               1    0x55a91f1b9860
+RPAREN          )               7                               
+LBRACE          {               8                               
+CASE            case            9                               
+'ID              A               9               3    0x55a91f1b9980
+':ID              grade           10              4    0x55a91f1b9980
+ASSIGN          =               10                              
+'DECIMAL         1               10                              
+'SEMICOLON       ;               10                              
+BREAK           break           11                              
+SEMICOLON       ;               11                              
+CASE            case            12                              
+'ID              B               12              5    0x55a91f1b9980
+':CASE            case            13                              
+'ID              C               13              6    0x55a91f1b9980
+':ID              grade           14              4    0x55a91f1b9980
+ASSIGN          =               14                              
+'DECIMAL         2               14                              
+'SEMICOLON       ;               14                              
+BREAK           break           15                              
+SEMICOLON       ;               15                              
+CASE            case            16                              
+'ID              D               16              7    0x55a91f1b9980
+':ID              grade           17              4    0x55a91f1b9980
+ASSIGN          =               17                              
+'DECIMAL         3               17                              
+'SEMICOLON       ;               17                              
+BREAK           break           18                              
+SEMICOLON       ;               18                              
+CASE            case            19                              
+'ID              F               19              8    0x55a91f1b9980
+':ID              grade           20              4    0x55a91f1b9980
+ASSIGN          =               20                              
+'DECIMAL         4               20                              
+'SEMICOLON       ;               20                              
+BREAK           break           21                              
+SEMICOLON       ;               21                              
+DEFAULT         default         22                              
+:ID              grade           23              4    0x55a91f1b9980
+ASSIGN          =               23                              
+'DECIMAL         0               23                              
+'SEMICOLON       ;               23                              
+RBRACE          }               24                              
+INT             int             26                              
+ID              a               26              9    0x55a91f1b9860
+ASSIGN          =               26                              
+DECIMAL         1               26                              
+SEMICOLON       ;               26                              
+FOR             for             27                              
+LPAREN          (               27                              
+INT             int             27                              
+ID              i               27              10    0x55a91f1b9860
+ASSIGN          =               27                              
+DECIMAL         0               27                              
+SEMICOLON       ;               27                              
+ID              i               27              10    0x55a91f1b9860
+LESS            <               27                              
+DECIMAL         10              27                              
+SEMICOLON       ;               27                              
+ID              i               27              10    0x55a91f1b9860
+ADD             +               27                              
+ADD             +               27                              
+RPAREN          )               27                              
+LBRACE          {               27                              
+IF              if              28                              
+LPAREN          (               28                              
+ID              i               28              11    0x55a91f1b9c80
+EQUAL           ==              28                              
+DECIMAL         3               28                              
+RPAREN          )               28                              
+CONTINUE        continue        28                              
+SEMICOLON       ;               28                              
+ID              a               29              12    0x55a91f1b9c80
+ASSIGN          =               29                              
+ID              a               29              12    0x55a91f1b9c80
+ADD             +               29                              
+ID              i               29              11    0x55a91f1b9c80
+SEMICOLON       ;               29                              
+RBRACE          }               30                              
+RETURN          return          33                              
+DECIMAL         0               33                              
+SEMICOLON       ;               33                              
+RBRACE          }               34                              

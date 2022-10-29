@@ -1,0 +1,34 @@
+
+int main ()
+{
+   // 局部变量声明
+   char grade = 'D';
+ 
+   switch(grade)
+   {
+   case 'A' :
+      grade='1';
+      break;
+   case 'B' :
+   case 'C' :
+      grade='2';
+      break;
+   case 'D' :
+      grade='3';
+      break;
+   case 'F' :
+      grade='4';
+      break;
+   default :
+      grade='0';
+   }
+
+   int a=1;
+   for(int i=0;i<10;i++){
+    if(i==3)continue;
+    a=a+i;
+   }
+
+ 
+   return 0;
+}

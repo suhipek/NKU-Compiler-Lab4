@@ -99,6 +99,17 @@ commentelement [^\n]
         return VOID;
     #endif 
 }
+
+"char" {
+    //增加了char类型变量
+    #ifdef ONLY_FOR_LEX
+        DEBUG_FOR_LAB4_TABLE("CHAR","char");
+    #else
+        return CHAR;
+    #endif
+}
+
+
 "while" {
     #ifdef ONLY_FOR_LEX
         DEBUG_FOR_LAB4_TABLE("WHILE", "while");
@@ -134,6 +145,45 @@ commentelement [^\n]
         return RETURN;
     #endif
 }
+
+
+"continue" {
+    //增加了新的符号表
+    #ifdef ONLY_FOR_LEX
+        DEBUG_FOR_LAB4_TABLE("CONTINUE","continue");
+    #else
+        return CONTINUE;
+    #endif
+}
+"break" {
+    #ifdef ONLY_FOR_LEX
+        DEBUG_FOR_LAB4_TABLE("BREAK","break");
+    #else
+        return BREAK;
+    #endif
+}
+"switch" {
+    #ifdef ONLY_FOR_LEX
+        DEBUG_FOR_LAB4_TABLE("SWITCH","switch");
+    #else
+        return SWITCH;
+    #endif
+}
+"case" {
+    #ifdef ONLY_FOR_LEX
+        DEBUG_FOR_LAB4_TABLE("CASE","case");
+    #else
+        return CASE;
+    #endif
+}
+"default" {
+    #ifdef ONLY_FOR_LEX
+        DEBUG_FOR_LAB4_TABLE("DEFAULT","default");
+    #else
+        return DEFAULT;
+    #endif
+}
+
 
 "=" {
     #ifdef ONLY_FOR_LEX

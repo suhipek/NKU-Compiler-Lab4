@@ -1,85 +1,85 @@
 INT             int             4                               
-ID              f               4               0    0x55776e14a0c0
+ID              f               4               0    0x557fc3a0e0c0
 LPAREN          (               4                               
 RPAREN          )               4                               
 LBRACE          {               4                               
 INT             int             5                               
-ID              a               5               1    0x55776fe4c860
+ID              a               5               1    0x557fc4686860
 SEMICOLON       ;               5                               
-ID              a               6               1    0x55776fe4c860
+ID              a               6               1    0x557fc4686860
 ASSIGN          =               6                               
 DECIMAL         0               6                               
 SEMICOLON       ;               6                               
 WHILE           while           7                               
 LPAREN          (               7                               
-ID              a               7               1    0x55776fe4c860
+ID              a               7               1    0x557fc4686860
 LESS            <               7                               
 DECIMAL         10              7                               
 RPAREN          )               7                               
 LBRACE          {               7                               
-ID              a               8               2    0x55776fe4c930
+ID              a               8               2    0x557fc4686930
 STAR            *               8                               
 ASSIGN          =               8                               
 DECIMAL         2               8                               
 SEMICOLON       ;               8                               
 IF              if              9                               
 LPAREN          (               9                               
-ID              a               9               2    0x55776fe4c930
+ID              a               9               2    0x557fc4686930
 LESS            <               9                               
 DECIMAL         10000           9                               
 RPAREN          )               9                               
-ID              continue        10              3    0x55776fe4c930
+CONTINUE        continue        10                              
 SEMICOLON       ;               10                              
 ELSE            else            11                              
-ID              break           12              4    0x55776fe4c930
+BREAK           break           12                              
 SEMICOLON       ;               12                              
 RBRACE          }               13                              
 RETURN          return          14                              
-ID              a               14              1    0x55776fe4c860
+ID              a               14              1    0x557fc4686860
 SEMICOLON       ;               14                              
 RBRACE          }               15                              
 INT             int             16                              
-ID              main            16              5    0x55776e14a0c0
+ID              main            16              3    0x557fc3a0e0c0
 LPAREN          (               16                              
 RPAREN          )               16                              
 LBRACE          {               16                              
 INT             int             17                              
-ID              a               17              6    0x55776fe4caf0
+ID              a               17              4    0x557fc4686a50
 SEMICOLON       ;               17                              
-ID              a               18              6    0x55776fe4caf0
+ID              a               18              4    0x557fc4686a50
 ASSIGN          =               18                              
 DECIMAL         0               18                              
 SEMICOLON       ;               18                              
 INT             int             19                              
-ID              b               19              7    0x55776fe4caf0
+ID              b               19              5    0x557fc4686a50
 ASSIGN          =               19                              
 HEX             0x1a1f          19              6687            
 SEMICOLON       ;               19                              
 INT             int             20                              
-ID              c               20              8    0x55776fe4caf0
+ID              c               20              6    0x557fc4686a50
 ASSIGN          =               20                              
 OCT             02135           20              1117            
 SEMICOLON       ;               20                              
 IF              if              21                              
 LPAREN          (               21                              
-ID              a               21              6    0x55776fe4caf0
+ID              a               21              4    0x557fc4686a50
 EQUAL           ==              21                              
 DECIMAL         0               21                              
 RPAREN          )               21                              
 LBRACE          {               21                              
 IF              if              22                              
 LPAREN          (               22                              
-ID              b               22              9    0x55776fe4cc60
+ID              b               22              7    0x557fc4686bc0
 NOEQUAL         !=              22                              
 DECIMAL         1               22                              
 RPAREN          )               22                              
 LBRACE          {               23                              
 INT             int             24                              
-ID              a               24              10    0x55776fe4cd10
+ID              a               24              8    0x557fc4686c70
 SEMICOLON       ;               24                              
-ID              a               25              10    0x55776fe4cd10
+ID              a               25              8    0x557fc4686c70
 ASSIGN          =               25                              
-ID              a               25              10    0x55776fe4cd10
+ID              a               25              8    0x557fc4686c70
 ADD             +               25                              
 DECIMAL         1               25                              
 SEMICOLON       ;               25                              
