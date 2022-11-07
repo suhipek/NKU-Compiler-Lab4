@@ -1,21 +1,9 @@
 %option noyywrap
 %{
-    /*
-    * You will need to comment this line in lab5.
-    */
-    #define ONLY_FOR_LEX
-    
-    #ifdef ONLY_FOR_LEX
-    #else
-    #define YYSTYPE void *
-    #include "parser.h"
-    #endif
-
     #define YY_NO_UNPUT
     #define YY_NO_INPUT
-    #include <string>
 
-    #ifdef ONLY_FOR_LEX
+    #include "parser.h"
     #include <sstream>
     #include <iostream>
     #include <iomanip>
@@ -25,6 +13,7 @@
     #include <vector>
     
     using namespace std;
+
     extern FILE *yyin; 
     extern FILE *yyout;
     
@@ -51,7 +40,6 @@
         // std::string DEBUG_INFO = "[DEBUG LAB4]: \t" + s + "\n";
         // fputs(DEBUG_INFO.c_str(), yyout);
     }
-    #endif
 %}
 
 DECIMIAL ([1-9][0-9]*|0)
@@ -264,7 +252,6 @@ commentelement [^\n]
         DEBUG_FOR_LAB4_TABLE("RPAREN", ")");
     #else
     return RPAREN;
-    #endif
 }
 "{" {
     #ifdef ONLY_FOR_LEX
@@ -375,6 +362,15 @@ commentelement [^\n]
 }
 
 
+{ID} {
+    if(dump_tokens)
+        DEBUG_FOR_LAB4(yytext);
+    char *lexeme;
+    lexeme = new char[strlen(yytext) + 1];
+    strcpy(lexeme, yytext);
+    yylval.strtype = lexeme;
+    return ID;
+}
 {EOL} yylineno++;
 {WHITE}
 %%
